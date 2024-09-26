@@ -7,280 +7,289 @@
     android:gravity="center"
     android:background="#FFB300">
 
-    <!-- Title -->
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Racing Game"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="#333333"
-        android:gravity="center"
-        android:layout_marginBottom="24dp"
-        android:layout_gravity="center"/>
-
-    <!-- Race Track Container -->
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#D63FCCCA"
-        android:elevation="4dp"
-        android:padding="16dp"
-        android:layout_marginBottom="24dp"
-        android:layout_gravity="center">
+        android:layout_height="match_parent">
 
-        <!-- Car 1 -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Car 1"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#ff5722"
-            android:layout_gravity="start" />
-
-        <SeekBar
-            android:id="@+id/seekBarCar1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:max="100"
-            android:progress="0"
-            android:thumb="@drawable/car1"
-            android:background="@drawable/road2"
-        android:progressTint="#ff5722"
-            android:layout_marginBottom="16dp"
-            android:enabled="false"
-             />
-
-        <!-- Car 2 -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Car 2"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#4caf50"
-            android:layout_gravity="start" />
-
-        <SeekBar
-            android:id="@+id/seekBarCar2"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:max="100"
-            android:progress="0"
-            android:thumb="@drawable/car1"
-            android:layout_marginBottom="16dp"
-            android:progressTint="#4caf50"
-            android:background="@drawable/road2"
-            android:enabled="false"
-             />
-
-        <!-- Car 3 -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Car 3"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#2196f3"
-            android:layout_gravity="start" />
-
-        <SeekBar
-            android:id="@+id/seekBarCar3"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:max="100"
-            android:progress="0"
-            android:thumb="@drawable/car1"
-            android:progressTint="#2196f3"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/road2"
-            android:enabled="false"
-             />
-
-        <!-- Car 4 -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Car 4"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#9c27b0"
-            android:layout_gravity="start" />
-
-        <SeekBar
-            android:id="@+id/seekBarCar4"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:max="100"
-            android:thumb="@drawable/car1"
-            android:progress="0"
-            android:progressTint="#9c27b0"
-            android:background="@drawable/road2"
-            android:enabled="false"
-             />
-    </LinearLayout>
-
-    <!-- Betting System Title -->
-    <TextView
-        android:id="@+id/betTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Place Your Bets"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="#333333"
-        android:layout_marginBottom="16dp"
-        android:layout_gravity="center"/>
-
-    <!-- Betting Section -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <!-- Car 1 Bet -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:orientation="vertical"
+            android:gravity="center">
 
-            <CheckBox
-                android:id="@+id/checkBoxCar1"
+            <!-- Title -->
+            <TextView
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Car 1"
-                android:textColor="#ff5722"
-                android:textStyle="bold"/>
+                android:text="Racing Game"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"
+                android:layout_gravity="center"/>
 
-            <EditText
-                android:id="@+id/betAmountCar1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="Bet Amount"
-                android:inputType="number"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp"
-                android:background="@android:drawable/editbox_background"
-                android:padding="8dp"/>
-        </LinearLayout>
-
-        <!-- Car 2 Bet -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
-
-            <CheckBox
-                android:id="@+id/checkBoxCar2"
+            <TextView
+                android:id="@+id/balanceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Car 2"
-                android:textColor="#4caf50"
-                android:textStyle="bold"/>
+                android:text="Balance: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"/>
 
-            <EditText
-                android:id="@+id/betAmountCar2"
-                android:layout_width="0dp"
+            <!-- Race Track Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Bet Amount"
-                android:inputType="number"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp"
-                android:background="@android:drawable/editbox_background"
-                android:padding="8dp"/>
-        </LinearLayout>
+                android:orientation="vertical"
+                android:background="#D63FCCCA"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp"
+                android:layout_gravity="center">
 
-        <!-- Car 3 Bet -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+                <!-- Car 1 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Car 1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#ff5722"
+                    android:layout_gravity="start" />
+                <SeekBar
+                    android:id="@+id/seekBarCar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:thumb="@drawable/car1"
+                    android:background="@drawable/road2"
+                    android:progressTint="#ff5722"
+                    android:layout_marginBottom="16dp"
+                    android:enabled="false" />
 
-            <CheckBox
-                android:id="@+id/checkBoxCar3"
+                <!-- Car 2 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Car 2"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#4caf50"
+                    android:layout_gravity="start" />
+                <SeekBar
+                    android:id="@+id/seekBarCar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:thumb="@drawable/car1"
+                    android:layout_marginBottom="16dp"
+                    android:progressTint="#4caf50"
+                    android:background="@drawable/road2"
+                    android:enabled="false" />
+
+                <!-- Car 3 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Car 3"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2196f3"
+                    android:layout_gravity="start" />
+                <SeekBar
+                    android:id="@+id/seekBarCar3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:thumb="@drawable/car1"
+                    android:progressTint="#2196f3"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/road2"
+                    android:enabled="false" />
+
+                <!-- Car 4 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Car 4"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#9c27b0"
+                    android:layout_gravity="start" />
+                <SeekBar
+                    android:id="@+id/seekBarCar4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:max="100"
+                    android:thumb="@drawable/car1"
+                    android:progress="0"
+                    android:progressTint="#9c27b0"
+                    android:background="@drawable/road2"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+            <!-- Betting System Title -->
+            <TextView
+                android:id="@+id/betTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Car 3"
-                android:textColor="#2196f3"
-                android:textStyle="bold"/>
+                android:text="Place Your Bets"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"/>
 
-            <EditText
-                android:id="@+id/betAmountCar3"
-                android:layout_width="0dp"
+            <!-- Betting Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Bet Amount"
-                android:inputType="number"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp"
-                android:background="@android:drawable/editbox_background"
-                android:padding="8dp"/>
+                android:orientation="vertical">
+
+                <!-- Car 1 Bet -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <CheckBox
+                        android:id="@+id/checkBoxCar1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Car 1"
+                        android:textColor="#ff5722"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/betAmountCar1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Bet Amount"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:padding="8dp" />
+                </LinearLayout>
+
+                <!-- Car 2 Bet -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <CheckBox
+                        android:id="@+id/checkBoxCar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Car 2"
+                        android:textColor="#4caf50"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/betAmountCar2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Bet Amount"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:padding="8dp" />
+                </LinearLayout>
+
+                <!-- Car 3 Bet -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <CheckBox
+                        android:id="@+id/checkBoxCar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Car 3"
+                        android:textColor="#2196f3"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/betAmountCar3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Bet Amount"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:padding="8dp" />
+                </LinearLayout>
+
+                <!-- Car 4 Bet -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+                    <CheckBox
+                        android:id="@+id/checkBoxCar4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Car 4"
+                        android:textColor="#9c27b0"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/betAmountCar4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Bet Amount"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:padding="8dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Start Race Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/startButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#3f51b5"
+                    android:layout_marginEnd="16dp"
+                    android:padding="12dp"
+                    android:textStyle="bold"
+                    android:elevation="4dp" />
+
+                <Button
+                    android:id="@+id/resetButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reset"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#f44336"
+                    android:padding="12dp"
+                    android:textStyle="bold"
+                    android:elevation="4dp" />
+            </LinearLayout>
         </LinearLayout>
 
-        <!-- Car 4 Bet -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
-
-            <CheckBox
-                android:id="@+id/checkBoxCar4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Car 4"
-                android:textColor="#9c27b0"
-                android:textStyle="bold"/>
-
-            <EditText
-                android:id="@+id/betAmountCar4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="Bet Amount"
-                android:inputType="number"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp"
-                android:background="@android:drawable/editbox_background"
-                android:padding="8dp"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <!-- Buttons: Start and Reset -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="16dp">
-
-        <Button
-            android:id="@+id/startButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Start"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#3f51b5"
-            android:layout_marginEnd="16dp"
-            android:padding="12dp"
-            android:textStyle="bold"
-            android:elevation="4dp" />
-
-        <Button
-            android:id="@+id/resetButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Reset"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#f44336"
-            android:padding="12dp"
-            android:textStyle="bold"
-            android:elevation="4dp" />
-    </LinearLayout>
-
+    </ScrollView>
 </LinearLayout>
