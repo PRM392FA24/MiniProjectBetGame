@@ -80,6 +80,45 @@ public class BettingActivities extends AppCompatActivity {
             Toast.makeText(this, "Not enough money to bet", Toast.LENGTH_SHORT).show();
             return;
         }
+        boolean checkWithoutBet = false;
+
+        if (car1CheckBox.isChecked() && car1BetAmount.getText().toString().isEmpty()) {
+            checkWithoutBet = true;
+        }
+        if (car2CheckBox.isChecked() && car2BetAmount.getText().toString().isEmpty()) {
+            checkWithoutBet = true;
+        }
+        if (car3CheckBox.isChecked() && car3BetAmount.getText().toString().isEmpty()) {
+            checkWithoutBet = true;
+        }
+        if (car4CheckBox.isChecked() && car4BetAmount.getText().toString().isEmpty()) {
+            checkWithoutBet = true;
+        }
+
+        if (checkWithoutBet) {
+            Toast.makeText(this, "Please enter a bet amount for all checked cars", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        boolean betWithoutcheck = false;
+
+        if (!car1CheckBox.isChecked() && !car1BetAmount.getText().toString().isEmpty()) {
+            betWithoutcheck = true;
+        }
+        if (!car2CheckBox.isChecked() && !car2BetAmount.getText().toString().isEmpty()) {
+            betWithoutcheck = true;
+        }
+        if (!car3CheckBox.isChecked() && !car3BetAmount.getText().toString().isEmpty()) {
+            betWithoutcheck = true;
+        }
+        if (!car4CheckBox.isChecked() && !car4BetAmount.getText().toString().isEmpty()) {
+            betWithoutcheck = true;
+        }
+
+        if (betWithoutcheck) {
+            Toast.makeText(this, "Please check cars you want to bet", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         if (!car1CheckBox.isChecked() && !car2CheckBox.isChecked() && !car3CheckBox.isChecked() && !car4CheckBox.isChecked()) {
             Toast.makeText(this, "Please select at least one car", Toast.LENGTH_SHORT).show();
